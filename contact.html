@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css?family=Montserrat:400,800");
+      body {
+        font-family: "Montserrat", sans-serif;
+        margin: 0;
+        padding: 0;
+        background: linear-gradient(to right, #f5f7fa, #c3cfe2);
+      }
+      nav {
+        background-color: #fa5757;
+        padding: 15px;
+        text-align: center;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+      }
+      nav a {
+        color: #efe9e9;
+        margin: 0 15px;
+        text-decoration: none;
+        font-size: 18px;
+      }
+      nav a:hover {
+        text-decoration: underline;
+      }
+      .container {
+        padding: 80px 20px 20px;
+        text-align: center;
+      }
+      h1 {
+        color: #333;
+        font-size: 36px;
+        margin-bottom: 20px;
+      }
+      .contact-info {
+        margin-top: 20px;
+        background: #ffffff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        display: inline-block;
+        max-width: 600px;
+        text-align: left;
+      }
+      iframe {
+        width: 100%;
+        height: 300px;
+        border: 0;
+        border-radius: 8px;
+        margin-top: 20px;
+      }
+      @media (max-width: 768px) {
+        nav a {
+          display: block;
+          margin: 10px 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact Us</a>
+      <a href="blog.html">Blog</a>
+      <a href="login.html">Log in</a>
+    </nav>
+
+    <div class="container">
+      <h1>Contact Us</h1>
+      <div class="contact-info">
+        <h2>Get in Touch</h2>
+        <p>
+          We’d love to hear from you! If you have any questions, comments, or
+          feedback, please feel free to reach out.
+        </p>
+        <p><b>Email:</b> support@bookworm.com</p>
+        <p><b>Phone:</b> +123 456 7890</p>
+        <p><b>Address:</b> 456 Travel Lane, Adventure City, USA</p>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3314.8855599809935!2d-117.99485392564985!3d33.81526623020857!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dd291668c42ac9%3A0x113bf3e753fff8e7!2sAdventure%20City!5e0!3m2!1sen!2sin!4v1726895465020!5m2!1sen!2sin"
+          width="600"
+          height="450"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+    </div>
+  </body>
+</html>
