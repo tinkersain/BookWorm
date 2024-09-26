@@ -1,0 +1,210 @@
+/* Global Styles */
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: white;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+nav {
+  background-color: #fa5757;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+nav a {
+  color: #efe9e9;
+  margin: 0 15px;
+  text-decoration: none;
+  font-size: 18px;
+}
+nav a:hover {
+  text-decoration: underline;
+}
+.container {
+  max-width: 900px;
+  margin: 5% auto;
+  padding: 20px;
+  background: linear-gradient(to right, #ed7d7d, #efb7b7);
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(225, 115, 115, 0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #f53030;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+h2 {
+  color: #f8f2f2;
+  text-align: center;
+  margin-top: 40px;
+  font-size: 2rem;
+}
+
+/* Form Styles */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+input,
+textarea {
+  width: 100%;
+  max-width: 600px;
+  padding: 15px;
+  margin: 10px 0;
+  border: 2px solid #826363;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #875a5a;
+  outline: none;
+}
+
+button {
+  padding: 12px 25px;
+  background-color: #ef5656;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #ce3737;
+}
+
+button:focus {
+  outline: none;
+}
+
+/* Book List Styles */
+.book-list {
+  margin-top: 40px;
+}
+
+.book {
+  background-color: white;
+  border-left: 5px solid #fa5757;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+
+.book:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.book h3 {
+  margin-top: 0;
+  font-size: 1.8rem;
+  color: #fa5757;
+}
+
+.book p {
+  margin: 8px 0;
+  line-height: 1.6;
+}
+
+.book button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: #333;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+}
+
+.book button:hover {
+  background-color: #fa5757;
+}
+
+/* Progress Bar Styles */
+.progress-container {
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+}
+
+input[type="number"] {
+  width: 60px;
+  margin-right: 15px;
+  padding: 10px;
+  font-size: 1.1rem;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  transition: border-color 0.3s ease;
+}
+
+input[type="number"]:focus {
+  border-color: #fa5757;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 12px;
+  background-color: #e0e0e0;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-right: 15px;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background-color: #fa5757;
+  width: 0%;
+  transition: width 0.3s ease;
+}
+
+/* Mobile Responsive Design */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  .book {
+    padding: 15px;
+  }
+
+  input,
+  textarea {
+    max-width: 100%;
+  }
+
+  .progress-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  input[type="number"] {
+    margin-bottom: 10px;
+  }
+}
