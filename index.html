@@ -20,25 +20,44 @@
         background: linear-gradient(to right, #f5f7fa, #c3cfe2);
       }
       nav {
-        background-color: #fa5757;
-        padding: 15px;
-        text-align: center;
-        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-        position: fixed;
-        width: 100%;
-        top: 0;
-        left: 0;
-        z-index: 1000;
-      }
-      nav a {
-        color: #efe9e9;
-        margin: 0 15px;
-        text-decoration: none;
-        font-size: 18px;
-      }
-      nav a:hover {
-        text-decoration: underline;
-      }
+  background-color: #fa5757;
+  padding: 10px;
+  text-align: center;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  z-index: 100;
+}
+
+.logo img {
+  width: 50px; /* Adjust the logo size */
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.nav-links a {
+  color: #efe9e9;
+  margin: 0 15px;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
       .container-top {
         padding: 80px 20px 20px;
         text-align: center;
@@ -74,13 +93,18 @@
     </style>
   </head>
   <body>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About Us</a>
-      <a href="contact.html">Contact Us</a>
-      <a href="blog.html">Blog</a>
-      <a href="login.html">Log in</a>
-    </nav>
+   <nav class="navbar">
+  <div class="logo">
+    <img src="https://img.freepik.com/free-vector/hand-drawn-flat-design-stack-books-illustration_23-2149341898.jpg?w=360" alt="Logo" />
+  </div>
+  <div class="nav-links">
+    <a href="login.html">Log in</a>
+    <a href="blog.html">Blog</a>
+    <a href="contact.html">Contact Us</a>
+    <a href="about.html">About Us</a>
+    <a href="index.html">Home</a>
+  </div>
+</nav>
 
     <section class="hero-section"></section>
     <div class="hero-container">
@@ -451,7 +475,33 @@
         </div>
       </div>
     </div>
+<section class="collab-section">
+            <h1>Collaborate with Bookstores</h1>
+            <p>Partner with local or online bookstores to offer exclusive deals and promotions on books directly through our platform.</p>
 
+            <div class="bookstore-offers">
+                <div class="offer-card">
+                    <h3>Local Bookstore Deal</h3>
+                    <p>Get 20% off on all fiction books at <strong>Readers' Paradise</strong>.</p>
+                    <button class="claim-btn" onclick="claimOffer('Local Bookstore Deal')">Claim Offer</button>
+                </div>
+
+                <div class="offer-card">
+                    <h3>Online Store Promotion</h3>
+                    <p>Use code <strong>BOOKLOVER</strong> for 15% off at <strong>Books Galore</strong>.</p>
+                    <button class="claim-btn" onclick="claimOffer('Online Store Promotion')">Claim Offer</button>
+                </div>
+                
+            </div>
+        </section>
+
+        <div id="offer-popup" class="popup">
+            <div class="popup-content">
+                <span class="close-btn" onclick="closePopup()">&times;</span>
+                <p id="popup-text"></p>
+            </div>
+        </div>
+    </div>
     <footer class="footer">
       <div class="container-f">
         <div class="row">
