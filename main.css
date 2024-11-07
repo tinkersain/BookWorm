@@ -8,29 +8,47 @@ body {
 }
 nav {
   background-color: #fa5757;
-  padding: 15px;
+  padding: 3px;
   text-align: center;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   position: fixed;
   width: 100%;
-  top: 0;
-  left: 0;
-  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-nav a {
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  z-index: 100;
+}
+
+.logo img {
+  width: 50px; /* Adjust the logo size */
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.nav-links a {
   color: #efe9e9;
   margin: 0 15px;
   text-decoration: none;
   font-size: 18px;
 }
-nav a:hover {
+
+.nav-links a:hover {
   text-decoration: underline;
 }
 header {
-  margin-top: 3.5%;
+  margin-top: 0%;
   background-color: #af4c4c;
   color: white;
-  padding: 20px;
+  padding: 100px 70px 20px 70px;
   text-align: center;
 }
 .hero-button {
@@ -43,6 +61,20 @@ header {
   transition: background-color 0.3s ease;
   margin-top: 10px;
 }
+.swap-button {
+  padding: 10px 30px;
+  background-color: #ff6b6b;
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+.swap-books-class {
+  display: flex;
+  justify-content: center;
+}
 h1 {
   margin: 0;
   font-size: 2.5rem;
@@ -53,7 +85,6 @@ p {
   font-size: 1.2rem;
 }
 
-/* Book container (using grid) */
 .book-container {
   display: grid;
   grid-template-columns: repeat(5, 1fr); /* 5 columns */
@@ -69,8 +100,12 @@ p {
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   width: 200px;
+  height: 480px; /* Set a fixed height to make all cards the same height */
   text-align: center;
   transition: transform 0.2s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .book-card:hover {
@@ -79,23 +114,27 @@ p {
 
 .book-card img {
   width: 100%;
-  height: auto;
+  height: 250px; /* Fixed height for consistent image sizing */
+  object-fit: cover; /* Ensures images are cropped to fit without stretching */
 }
 
 .book-details {
-  padding: 15px;
+  padding: 10px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .book-details h3 {
-  margin: 0;
-  font-size: 1.2rem;
+  margin: 10px 0;
+  font-size: 1.1rem;
   color: #af4c4c;
 }
 
 .book-details p {
   font-size: 0.9rem;
   color: #777;
-  margin: 10px 0;
+  margin: 5px 0 15px 0;
 }
 
 /* Buy button */
@@ -108,8 +147,94 @@ p {
   text-decoration: none;
   font-weight: bold;
   transition: background-color 0.3s;
+  margin-top: auto; /* Pushes the button to the bottom of the card */
 }
 
 .buy-button:hover {
   background-color: #a04545;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+.container-f {
+  max-width: 1170px;
+  margin: auto;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+ul {
+  list-style: none;
+}
+.footer {
+  margin-top: 4%;
+  background-color: #24262b;
+  padding: 70px 0;
+}
+.footer-col {
+  width: 25%;
+  padding: 0 15px;
+}
+.footer-col h4 {
+  font-size: 18px;
+  color: #ffffff;
+  text-transform: capitalize;
+  margin-bottom: 35px;
+  font-weight: 500;
+  position: relative;
+}
+.footer-col h4::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  background-color: #e91e63;
+  height: 2px;
+  box-sizing: border-box;
+  width: 50px;
+}
+.footer-col ul li:not(:last-child) {
+  margin-bottom: 10px;
+}
+.footer-col ul li a {
+  font-size: 16px;
+  text-transform: capitalize;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 300;
+  color: #bbbbbb;
+  display: block;
+  transition: all 0.3s ease;
+}
+.footer-col ul li a:hover {
+  color: #ffffff;
+  padding-left: 8px;
+}
+.footer-col .social-links a {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin: 0 10px 10px 0;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  color: #ffffff;
+  transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover {
+  color: #24262b;
+  background-color: #ffffff;
+}
+
+@media (max-width: 767px) {
+  .footer-col {
+    width: 50%;
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 574px) {
+  .footer-col {
+    width: 100%;
+  }
 }

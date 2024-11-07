@@ -7,22 +7,28 @@
     <link rel="stylesheet" href="bookrepo.css" />
   </head>
   <body>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About Us</a>
-      <a href="contact.html">Contact Us</a>
-      <a href="blog.html">Blog</a>
-      <a href="login.html">Log in</a>
+    <nav class="navbar">
+      <div class="logo">
+        <img
+          src="https://img.freepik.com/free-vector/hand-drawn-flat-design-stack-books-illustration_23-2149341898.jpg?w=360"
+          alt="Logo"
+        />
+      </div>
+      <div class="nav-links">
+        <a href="login.html">Log in</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="about.html">About Us</a>
+        <a href="index.html">Home</a>
+      </div>
     </nav>
     <div class="container">
       <h1>Book Repository</h1>
       <form id="bookForm">
         <input type="text" id="title" placeholder="Book Title" required />
         <input type="text" id="author" placeholder="Author" required />
-        <textarea id="summary" placeholder="Book Summary" required></textarea>
         <button type="submit">Add Book</button>
       </form>
-
       <div id="bookList" class="book-list">
         <h2>Added Books</h2>
         <div id="books"></div>
